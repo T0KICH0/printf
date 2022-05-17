@@ -7,7 +7,8 @@
 int main(void){
 char Gpa = 'A';
 char Name[] = "John";
-printf("hello %s your grade is %c", Name, Gpa);
+printf("hello %s\n", Name);
+printf("your Gpa is %c\n", Gpa);
 return 0;
 }
 
