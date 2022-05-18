@@ -40,7 +40,7 @@ int loop_format(va_list arg, const char *string)
 
 		int i = 0, flag = 0, cont_fm = 0, cont = 0, check_per = 0;
 
-		while (i < _strlen((char *)string) && *string != '\0')
+		while (i < strlen((char *)string) && *string != '\0')
 		{
 			char aux = string[i];
 
@@ -48,7 +48,7 @@ int loop_format(va_list arg, const char *string)
 			{
 				i++, flag++;
 				aux = string[i];
-				if (aux == '\0' && _strlen((char *)string) == 1)
+				if (aux == '\0' && strlen((char *)string) == 1)
 					return (-1);
 				if (aux == '\0')
 					return (cont);
@@ -88,16 +88,16 @@ int loop_format(va_list arg, const char *string)
  *Return: 1 if % is printed
  */
 
-int check_percent(int *flag, char aux)
+int check_percent(int *flag, int aux)
 
 {
 	int tmp_flag;
 	int cont = 0;
 
 	tmp_flag = *flag;
-	if (tmp_flag == 2 && aux == '%')
+	if (tmp_flag == 2 && aux == 'c')
 	{
-		_putchar('%');
+		_putchar('c');
 		tmp_flag = 0;
 		cont = 1;
 	}
