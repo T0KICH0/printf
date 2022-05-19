@@ -37,7 +37,6 @@ int _printf(const char *format, ...)
 int loop_format(va_list arg, const char *string)
 
 {
-
 		int i = 0, flag = 0, cont_fm = 0, cont = 0, check_per = 0;
 
 		while (i < _strlen((char *)string) && *string != '\0')
