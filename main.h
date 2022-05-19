@@ -6,7 +6,7 @@
 
 int _putchar(char c);
 void _puts(char *str);
-int _strlen(char *s);
+int strlen(char *s);
 int _printf(const char *format, ...);
 char *convert_to(char representation[], unsigned int num, int base);
 int function_manager(char c, va_list arg);
