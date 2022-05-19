@@ -40,7 +40,7 @@ int loop_format(va_list arg, const char *string)
 
 		int i = 0, flag = 0, cont_fm = 0, cont = 0, check_per = 0;
 
-		while (i < strlen((char *)string) && *string != '\0')
+		while (i < _strlen((char *)string) && *string != '\0')
 		{
 			char aux = string[i];
 
@@ -48,7 +48,7 @@ int loop_format(va_list arg, const char *string)
 			{
 				i++, flag++;
 				aux = string[i];
-				if (aux == '\0' && strlen((char *)string) == 1)
+				if (aux == '\0' && _strlen((char *)string) == 1)
 					return (-1);
 				if (aux == '\0')
 					return (cont);
